@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Camera, MapPin, Video, Star, Quote } from "lucide-react";
 import heroVideoPoster from "@/assets/hero-golf-video-poster.jpg";
+import { trackButtonClick, trackVideoPlay } from "@/lib/analytics";
 
 const Homepage = () => {
   const services = [
@@ -36,6 +37,7 @@ const Homepage = () => {
           poster={heroVideoPoster}
           className="absolute inset-0 w-full h-full object-cover animate-fade-in"
           style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+          onPlay={() => trackVideoPlay('Hero Video')}
         >
           <source src="https://player.vimeo.com/external/434045526.hd.mp4?s=c27eecc69ad0daf8e1fb8f6c0c7a4fbd6b8b8a9f" type="video/mp4" />
         </video>
@@ -58,7 +60,13 @@ const Homepage = () => {
             Professional drone videography for golf courses, guy trips, and signature hole experiences.
           </p>
           
-          <Button asChild variant="hero" size="lg" className="text-lg px-8 py-4 h-auto">
+          <Button 
+            asChild 
+            variant="hero" 
+            size="lg" 
+            className="text-lg px-8 py-4 h-auto"
+            onClick={() => trackButtonClick('Get a Quote', 'Hero Section')}
+          >
             <Link to="/quote">Get a Quote</Link>
           </Button>
         </div>
@@ -106,7 +114,12 @@ const Homepage = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button asChild variant="premium" size="lg">
+            <Button 
+              asChild 
+              variant="premium" 
+              size="lg"
+              onClick={() => trackButtonClick('View All Services', 'Services Section')}
+            >
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
@@ -175,7 +188,13 @@ const Homepage = () => {
             Let's discuss how we can create stunning aerial footage for your golf course, 
             event, or next guy trip.
           </p>
-          <Button asChild variant="premium" size="lg" className="text-lg px-8 py-4 h-auto">
+          <Button 
+            asChild 
+            variant="premium" 
+            size="lg" 
+            className="text-lg px-8 py-4 h-auto"
+            onClick={() => trackButtonClick('Get Started Today', 'CTA Section')}
+          >
             <Link to="/quote">Get Started Today</Link>
           </Button>
         </div>

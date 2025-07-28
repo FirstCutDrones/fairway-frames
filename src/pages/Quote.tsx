@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import quoteBackground from "@/assets/quote-background.jpg";
+import { trackFormSubmission, trackQuoteRequest } from "@/lib/analytics";
 
 const Quote = () => {
   const { toast } = useToast();
@@ -33,6 +34,10 @@ const Quote = () => {
       return;
     }
 
+    // Track the quote request
+    trackFormSubmission('Quote Request');
+    trackQuoteRequest(formData.serviceType);
+    
     // Here you would typically send the data to your backend
     console.log("Quote request submitted:", formData);
     

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Camera, MapPin, Video, Star, Quote } from "lucide-react";
-import heroImage from "@/assets/hero-golf-course.jpg";
+import heroVideoPoster from "@/assets/hero-golf-video-poster.jpg";
 
 const Homepage = () => {
   const services = [
@@ -26,10 +26,24 @@ const Homepage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          poster={heroVideoPoster}
+          className="absolute inset-0 w-full h-full object-cover animate-fade-in"
+          style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+        >
+          <source src="https://player.vimeo.com/external/434045526.hd.mp4?s=c27eecc69ad0daf8e1fb8f6c0c7a4fbd6b8b8a9f" type="video/mp4" />
+        </video>
+        
+        {/* Black overlay that fades out */}
+        <div className="absolute inset-0 bg-black animate-fade-out" style={{ animationDelay: '1s', animationFillMode: 'both' }} />
+        
+        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">

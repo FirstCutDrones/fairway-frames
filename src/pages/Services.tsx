@@ -5,10 +5,10 @@ import { Camera, Video, Users, HardDrive, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Service images
-import serviceDrone from "@/assets/service-drone.jpg";
-import serviceCourse from "@/assets/service-course.jpg";
-import serviceGroup from "@/assets/service-group.jpg";
-import serviceRaw from "@/assets/service-raw.jpg";
+import signatureHole from "@/assets/service-signature-hole.jpg";
+import fullCourse from "@/assets/service-full-course.jpg";
+import groupGolf from "@/assets/service-group-golf.jpg";
+import videoEditing from "@/assets/service-video-editing.jpg";
 
 const Services = () => {
   const services = [
@@ -17,28 +17,28 @@ const Services = () => {
       description: "A cinematic drone flyover of a specific golf hole, perfect for course websites and social media. Professional editing with music and graphics included.",
       price: "$250",
       icon: Camera,
-      image: serviceDrone,
+      image: signatureHole,
     },
     {
       title: "Full Course Package",
       description: "Hole-by-hole aerial walkthroughs with professional editing, music, graphics, and optional narration. Complete course showcase for marketing and events.",
       price: "$2,000",
       icon: Video,
-      image: serviceCourse,
+      image: fullCourse,
     },
     {
       title: "Guy Trip Highlights",
       description: "Capture your group's golf vacation from the sky with custom edits, music, and memorable moments. Perfect for preserving those special golf getaways.",
       price: "$800",
       icon: Users,
-      image: serviceGroup,
+      image: groupGolf,
     },
     {
       title: "Raw Drone Footage Only",
       description: "Just the unedited 4K aerial clips, delivered digitally. Perfect for clients who prefer to handle their own editing and post-production.",
       price: "$300",
       icon: HardDrive,
-      image: serviceRaw,
+      image: videoEditing,
     },
   ];
 

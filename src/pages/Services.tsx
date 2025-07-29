@@ -4,6 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Camera, Video, Users, HardDrive, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Service images
+import serviceDrone from "@/assets/service-drone.jpg";
+import serviceCourse from "@/assets/service-course.jpg";
+import serviceGroup from "@/assets/service-group.jpg";
+import serviceRaw from "@/assets/service-raw.jpg";
+
 const Services = () => {
   const services = [
     {
@@ -11,24 +17,28 @@ const Services = () => {
       description: "A cinematic drone flyover of a specific golf hole, perfect for course websites and social media. Professional editing with music and graphics included.",
       price: "$250",
       icon: Camera,
+      image: serviceDrone,
     },
     {
       title: "Full Course Package",
       description: "Hole-by-hole aerial walkthroughs with professional editing, music, graphics, and optional narration. Complete course showcase for marketing and events.",
       price: "$2,000",
       icon: Video,
+      image: serviceCourse,
     },
     {
       title: "Guy Trip Highlights",
       description: "Capture your group's golf vacation from the sky with custom edits, music, and memorable moments. Perfect for preserving those special golf getaways.",
       price: "$800",
       icon: Users,
+      image: serviceGroup,
     },
     {
       title: "Raw Drone Footage Only",
       description: "Just the unedited 4K aerial clips, delivered digitally. Perfect for clients who prefer to handle their own editing and post-production.",
       price: "$300",
       icon: HardDrive,
+      image: serviceRaw,
     },
   ];
 
@@ -55,6 +65,7 @@ const Services = () => {
               description={service.description}
               price={service.price}
               icon={service.icon}
+              image={service.image}
             />
           ))}
         </div>

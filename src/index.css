@@ -2,60 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* First Cut Drones Design System - Premium Golf & Tech Aesthetic */
+/* First Cut Drones Design System - Cinematic Golf Tech Dark Mode */
 
 @layer base {
   :root {
-    /* Core Colors - Golf Course Inspired */
-    --background: 0 0% 100%;
-    --foreground: 140 8% 15%;
+    /* Core Dark Backgrounds */
+    --background: 210 8% 8%;          /* #111315 - Rich near-black */
+    --foreground: 0 0% 95%;           /* #F1F1F1 - Clean white text */
     
-    /* Card System */
-    --card: 0 0% 100%;
-    --card-foreground: 140 8% 15%;
+    /* Card & Surface System */
+    --card: 210 8% 15%;               /* #232628 - Card/surface background */
+    --card-foreground: 0 0% 95%;      /* #F1F1F1 - Card text */
     
-    /* Overlays */
-    --popover: 0 0% 100%;
-    --popover-foreground: 140 8% 15%;
+    /* Overlays & Popovers */
+    --popover: 210 8% 15%;            /* #232628 - Popup backgrounds */
+    --popover-foreground: 0 0% 95%;   /* #F1F1F1 - Popup text */
     
-    /* Primary - Deep Golf Green */
-    --primary: 142 32% 24%;
-    --primary-foreground: 0 0% 98%;
-    --primary-light: 142 40% 35%;
-    --primary-dark: 142 45% 15%;
+    /* Primary - Bright Tech Green */
+    --primary: 132 59% 63%;           /* #64D688 - Modern mint-green glow */
+    --primary-foreground: 210 8% 8%;  /* Dark text on green */
+    --primary-light: 130 60% 55%;     /* #3CD277 - Hover state */
+    --primary-dark: 130 25% 31%;      /* #3A5F40 - Dark sage green */
     
-    /* Secondary - Sophisticated Gray */
-    --secondary: 210 8% 96%;
-    --secondary-foreground: 140 8% 15%;
+    /* Secondary - Dark Surface */
+    --secondary: 210 8% 12%;          /* #1A1D1F - Secondary background */
+    --secondary-foreground: 0 0% 95%; /* #F1F1F1 - Secondary text */
     
-    /* Muted Tones */
-    --muted: 142 15% 94%;
-    --muted-foreground: 140 6% 45%;
+    /* Muted Tones - Dark Theme */
+    --muted: 210 8% 20%;              /* #2F3335 - Divider lines */
+    --muted-foreground: 0 0% 71%;     /* #B5B5B5 - Secondary text */
     
-    /* Accent - Premium Gold */
-    --accent: 45 85% 58%;
-    --accent-foreground: 140 8% 15%;
+    /* Accent - Sage Green Details */
+    --accent: 130 25% 31%;            /* #3A5F40 - Dark sage for subtle accents */
+    --accent-foreground: 0 0% 95%;    /* #F1F1F1 - Text on accent */
     
     /* Status Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    /* Borders & Inputs */
-    --border: 142 20% 88%;
-    --input: 142 20% 88%;
-    --ring: 142 32% 24%;
+    /* Borders & Inputs - Dark Theme */
+    --border: 210 8% 20%;             /* #2F3335 - Border color */
+    --input: 210 8% 15%;              /* #232628 - Input background */
+    --ring: 132 59% 63%;              /* #64D688 - Focus ring */
     
-    /* Golf Course Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(142, 45%, 15%) 0%, hsl(142, 32%, 24%) 50%, hsl(142, 40%, 35%) 100%);
-    --gradient-fairway: linear-gradient(180deg, hsl(142, 25%, 85%) 0%, hsl(142, 30%, 75%) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(45, 85%, 58%) 0%, hsl(42, 75%, 52%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(142, 15%, 98%) 100%);
+    /* Cinematic Tech Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210, 8%, 8%) 0%, hsl(210, 8%, 12%) 50%, hsl(132, 59%, 63%) 100%);
+    --gradient-fairway: linear-gradient(180deg, hsl(210, 8%, 15%) 0%, hsl(210, 8%, 20%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(132, 59%, 63%) 0%, hsl(130, 60%, 55%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210, 8%, 8%) 0%, hsl(210, 8%, 12%) 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(132, 59%, 63%) 0%, hsl(130, 60%, 55%) 50%, hsl(132, 59%, 63%) 100%);
     
-    /* Shadows - Elevated & Premium */
-    --shadow-soft: 0 2px 8px -2px hsl(142, 32%, 24% / 0.08);
-    --shadow-medium: 0 4px 16px -4px hsl(142, 32%, 24% / 0.12);
-    --shadow-strong: 0 8px 32px -8px hsl(142, 32%, 24% / 0.16);
-    --shadow-glow: 0 0 24px hsl(45, 85%, 58% / 0.15);
+    /* Premium Dark Shadows & Glows */
+    --shadow-soft: 0 2px 8px -2px hsl(0, 0%, 0% / 0.3);
+    --shadow-medium: 0 4px 16px -4px hsl(0, 0%, 0% / 0.4);
+    --shadow-strong: 0 8px 32px -8px hsl(0, 0%, 0% / 0.5);
+    --shadow-glow: 0 0 24px hsl(132, 59%, 63% / 0.3);
+    --shadow-glow-strong: 0 0 40px hsl(132, 59%, 63% / 0.4);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

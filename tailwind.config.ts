@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Aptos', 'system-ui', 'sans-serif'],
+				'sans': ['Inter', 'Montserrat', 'Poppins', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -78,12 +78,14 @@ export default {
 				'gradient-fairway': 'var(--gradient-fairway)',
 				'gradient-premium': 'var(--gradient-premium)',
 				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-glow': 'var(--gradient-glow)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'medium': 'var(--shadow-medium)',
 				'strong': 'var(--shadow-strong)',
 				'glow': 'var(--shadow-glow)',
+				'glow-strong': 'var(--shadow-glow-strong)',
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',

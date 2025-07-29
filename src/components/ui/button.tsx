@@ -9,17 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-light shadow-medium hover:shadow-strong",
+        default: "bg-primary text-primary-foreground hover:bg-primary-light shadow-glow hover:shadow-glow-strong transition-all duration-300",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-medium",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-border bg-card/50 backdrop-blur-sm text-foreground hover:bg-primary/10 hover:border-primary hover:text-primary hover:shadow-glow transition-all duration-300",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        premium: "bg-gradient-premium text-accent-foreground hover:shadow-glow shadow-medium font-semibold",
-        hero: "bg-primary text-primary-foreground hover:bg-primary-light shadow-strong hover:shadow-glow border-2 border-primary-light/20 font-semibold",
+          "bg-secondary text-secondary-foreground hover:bg-muted shadow-soft hover:shadow-medium transition-all duration-300",
+        ghost: "hover:bg-accent/20 hover:text-primary transition-all duration-300",
+        link: "text-primary underline-offset-4 hover:underline hover:text-primary-light transition-colors",
+        premium: "bg-gradient-glow text-background hover:shadow-glow-strong shadow-glow font-semibold transition-all duration-300 transform hover:scale-105",
+        hero: "bg-gradient-premium text-background hover:shadow-glow-strong shadow-glow border border-primary/30 font-semibold transition-all duration-300 transform hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",

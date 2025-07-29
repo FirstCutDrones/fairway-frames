@@ -8,6 +8,8 @@ const Navigation = () => {
   const navItems = [
     { name: "Gallery", path: "/gallery" },
     { name: "Services", path: "/services" },
+    { name: "Partners", path: "/partners" },
+    { name: "Blog", path: "/blog" },
     { name: "Quote", path: "/quote" },
   ];
 
